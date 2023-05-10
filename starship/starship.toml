@@ -1,0 +1,39 @@
+#Format
+format = '''
+[┌───────────────────>](bold green)  $directory
+[│](bold green)$battery
+[└─](bold green)$character '''
+
+
+#Disable the blank line at the start of the prompt
+add_newline = false
+#Disable the Package
+[package]
+disabled = true
+
+
+#Character Module
+[character]                          
+success_symbol = "[>](bold green)"      
+error_symbol = '[✗](bold red) '
+
+
+#Battery Module
+[battery]
+full_symbol = '🔋 '
+charging_symbol = '⚡️ '
+discharging_symbol = '💀 '
+[[battery.display]] # 'bold red' style and discharging_symbol when capacity is between 0% and 10%
+threshold = 10
+style = 'bold red'
+[[battery.display]] # 'bold yellow' style and 💦 symbol when capacity is between 10% and 30%
+threshold = 30
+style = 'bold orange'
+[[battery.display]] # 'bold red' style and discharging_symbol when capacity is between 0% and 10%
+threshold = 60
+style = 'bold yellow'
+[[battery.display]] # 'bold yellow' style and 💦 symbol when capacity is between 10% and 30%
+threshold = 100
+style = 'bold green'
+
+
