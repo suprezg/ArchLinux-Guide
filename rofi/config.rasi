@@ -1,7 +1,7 @@
 /*
- * rofi themes - glassy
+ * rofi themes - pfp
  * colors - custom
- * mode - dark
+ * mode - light
  */
 
 configuration {
@@ -11,58 +11,65 @@ configuration {
 }
 
 * {
-    bg: #01131a;
-    fg: #f5f0f1;
-    alt: #09181f;
-    rad: 10px;
+    bg: #f8f9f7;
+    fg: #372d2f;
+    alt: #c2c7be;
 
     background-color: @bg;
     text-color: @fg;
-}
-
-window {
-    fullscreen: true;
-    padding: 5.5em 50% 5.5em 10%;
-    background-color: #0000;
 }
 
 mainbox {
     children: [ inputbar, listview ];
+    layout: horizontal;
     spacing: 2%;
-    border-color: @fg;
-    background-color: #0000;
 }
 
 inputbar {
-    children: [ entry ];
-    padding: 3em 3em 1.5em;
-    border-radius: @rad;
-    background-image: url("~/wallpapers/normal/platform.jpg", width);
-}
-
-entry {
-    padding: 2% 3%;
-    placeholder: "Search through apps";
-    border-radius: @rad;
-    background-color: @bg;
+    children: [ pfp, entry ];
+    padding: 64px 64px 0 64px;
+    spacing: 64px;
+    background-image: url("img/banner.png", width);
     text-color: @fg;
 }
 
+pfp {
+    width: 110px;
+    expand: false;
+    padding: 50px;
+    border: 5px;
+    border-color: @bg;
+    background-image: url("img/pfp.png", height);
+}
+
+entry {
+    padding: 10px 2%;
+    margin: 29px 0;
+    placeholder: "Search";
+    vertical-align: 0.5;
+    border: 5px;
+    border-color: @bg;
+    background-color: @fg;
+    text-color: @bg;
+}
+
 listview {
-    layout: vertical; 
-    lines: 6;
+    lines: 4;
+    columns: 2;
     cycle: false;
-    padding: 3em;
-    border-radius: @rad;
-    border-color: #1C00ff00;
-    background-image: url("~/wallpapers/normal/platform.jpg", width);
+    padding: 16px 32px 32px;
 }
 
 element {
     orientation: vertical;
-    padding: 2% 3%;
-    border-radius: @rad;
-    background-color: @bg;
-    text-color: @fg;
+    padding: 1.5% 0%;
 }
 
+element-text {
+    margin: 0.5% 3%;
+    vertical-align: 0.5;
+}
+
+element selected, element-text selected { background-color: @alt; }
+listview, element, element-selected, element-text { cursor: pointer; }
+entry { cursor: text; }
