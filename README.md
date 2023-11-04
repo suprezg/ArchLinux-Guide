@@ -172,6 +172,7 @@ there are various themes available for rofi [1](https://github.com/joni84/rofi).
 It is used for screen shot, you can access it through rofi.
 ```
 sudo pacman -Syu flameshot
+flameshot gui
 ```
 You can also use it by putting a keybind in your config directory.
 ### 8.sxiv
@@ -187,6 +188,11 @@ sudo pacman -Syu feh
 feh --bg-fill ur-wallpaperlocation
 ```
 you can also put it in your config directory so it enables at startup
+### 10.NetworkManager
+```
+nmcli device wifi list
+nmcli device wifi connect SSID_or_BSSID password ur-password
+```
 
 
 
