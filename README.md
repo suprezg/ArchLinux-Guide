@@ -87,7 +87,6 @@ exit
 umount -lR /mnt
 reboot
 ```
-
 ### 8.After reboot
 setting up the timezone
 ```
@@ -114,6 +113,78 @@ hostnamectl
 ```
 # Utilities
 
+### 1.Installing i3
+```
+sudo pacman -Syu xorg xorg-xinit i3-wm lightdm lightdm-gtk-greeter firefox dolphin htop git
+sudo systemctl enable lightdm
+```
+for shortcuts on i3 visit [i3](https://i3wm.org/docs/refcard.html).      
+the basic configuration file is present on this repo.
+### 2.Alacritty
+```
+sudo pacman -Syu alacritty
+```
+the basic configuration file is present on this repo.    
+some alacritty themes are present in this repo [1](https://github.com/eendroroy/alacritty-theme).
+### 3.Installing new fonts
+we will be using nerd fonts visit [nerd fonts](https://www.nerdfonts.com/font-downloads).We will be installing our font zip file in downloads directory.
+```
+cd /usr/share
+mkdir fonts
+cd fonts
+mkdir ur-fontname
+cd ur-fontname
+cp ~/Downloads/ur-fontname.zip /usr/share/fonts/ur-fontname
+unzip ur-fontname.zip
+```
+Using this command you can retrieve your font name
+```
+fc-cache -vf
+fc-match ur-fontname -a
+```
+### 4.ACPI
+It is used to check the battery level
+```
+sudo pacman -Syu acpi
+acpi -b
+```
+### 5.Neovim
+```
+sudo pacman -Syu neovim
+```
+using nvchad
+```
+git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
+```
+```
+ctrl+t+h       //opens themes pallete
+ctrl+c+h       //opens cheatsheet
+:Tsinstall ur-language      //installs syntax highlighting for ur-language
+```
+### 6.Rofi
+```
+sudo pacman -Syu rofi
+mkdir .config/rofi
+nvim rofi.rasi
+```
+there are various themes available for rofi [1](https://github.com/joni84/rofi).
+### 7.Flameshot
+It is used for screen shot, you can access it through rofi.
+```
+sudo pacman -Syu flameshot
+```
+### 8.sxiv
+simple x image viewr
+```
+sudo pacman -Syu sxiv
+sxiv image-name.extension
+```
+### 9.feh
+it is used to set the wallpaper
+```
+sudo pacman -Syu feh
+
+```
 
 
 
