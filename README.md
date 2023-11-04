@@ -167,12 +167,13 @@ sudo pacman -Syu rofi
 mkdir .config/rofi
 nvim rofi.rasi
 ```
-there are various themes available for rofi [1](https://github.com/joni84/rofi).
+there are various themes available for rofi [1](https://github.com/joni84/rofi).You can put a keybind for int in your config directory.
 ### 7.Flameshot
 It is used for screen shot, you can access it through rofi.
 ```
 sudo pacman -Syu flameshot
 ```
+You can also use it by putting a keybind in your config directory.
 ### 8.sxiv
 simple x image viewr
 ```
@@ -183,8 +184,9 @@ sxiv image-name.extension
 it is used to set the wallpaper
 ```
 sudo pacman -Syu feh
-
+feh --bg-fill ur-wallpaperlocation
 ```
+you can also put it in your config directory so it enables at startup
 
 
 
