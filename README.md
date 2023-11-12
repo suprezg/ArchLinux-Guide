@@ -165,7 +165,7 @@ ctrl+c+h       //opens cheatsheet
 ```
 sudo pacman -Syu rofi
 mkdir .config/rofi
-nvim rofi.rasi
+nvim config.rasi
 ```
 there are various themes available for rofi [1](https://github.com/joni84/rofi).You can put a keybind for int in your config directory.
 ### 7.Flameshot
