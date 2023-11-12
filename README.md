@@ -115,7 +115,7 @@ hostnamectl
 
 ### 1.Installing i3
 ```
-sudo pacman -Syu xorg xorg-xinit i3-wm lightdm lightdm-gtk-greeter firefox dolphin htop git
+sudo pacman -Syu xorg xorg-xinit i3-wm lightdm lightdm-gtk-greeter firefox dolphin htop git unzip
 sudo systemctl enable lightdm
 ```
 for shortcuts on i3 visit [i3](https://i3wm.org/docs/refcard.html).      
@@ -129,12 +129,12 @@ some alacritty themes are present in this repo [1](https://github.com/eendroroy/
 ### 3.Installing new fonts
 we will be using nerd fonts visit [nerd fonts](https://www.nerdfonts.com/font-downloads).We will be installing our font zip file in downloads directory.
 ```
-cd /usr/share
+cd /home/username/.local/share
 mkdir fonts
 cd fonts
 mkdir ur-fontname
+cp ~/Downlaods/ur-fontname.zip /home/username/.local/share/fonts/ur-fontname
 cd ur-fontname
-cp ~/Downloads/ur-fontname.zip /usr/share/fonts/ur-fontname
 unzip ur-fontname.zip
 ```
 Using this command you can retrieve your font name
