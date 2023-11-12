@@ -40,7 +40,7 @@ mount /dev/sda1 /mnt/boot/efi
 ```
 ### 5.Installing basic packages
 ```
-pacstrap -i /mnt base base-devel linux-lts linux-headers linux-firmware nano mpd mesa-utils pulseaudio intel-ucode or amd-ucode networkmanager
+pacstrap -i /mnt base base-devel linux-lts linux-headers linux-firmware nano mpd mesa-utils alsa-utils pulseaudio intel-ucode or amd-ucode networkmanager
 ```
 ### 6.Genrate Fstab
 ```
