@@ -167,7 +167,7 @@ sudo pacman -Syu rofi
 mkdir .config/rofi
 nvim config.rasi
 ```
-there are various themes available for rofi [1](https://github.com/joni84/rofi)[2](https://github.com/adi1090x/rofi).You can put a keybind for int in your config directory.
+there are various themes available for rofi [1](https://github.com/joni84/rofi),  [2](https://github.com/adi1090x/rofi).You can put a keybind for int in your config directory.
 ### 7.Flameshot
 It is used for screen shot, you can access it through rofi.
 ```
